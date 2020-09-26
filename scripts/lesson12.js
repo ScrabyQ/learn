@@ -4,7 +4,7 @@
 
  
  let i;
- const filmsCount = +prompt("Сколько фильмов смотрел?", "")
+ const filmsCount = +prompt("Сколько фильмов смотрел?", "");
  let userInputCount = +prompt("Сколько фильмов занести?");
 
 
