@@ -4,8 +4,8 @@
 
  
  let i;
- const filmsCount = +prompt("Сколько фильмов смотрел?", "");
- let userInputCount = +prompt("Сколько фильмов занести?");
+  const filmsCount = +prompt("Сколько фильмов смотрел?", "");
+  let userInputCount = +prompt("Сколько фильмов занести?");
 
 
 let personalMovieDB = {
@@ -16,7 +16,7 @@ genres: [],
 privat: false
 };
 
-
+writeYourGenres();
 
 
 for (i=1; i <= userInputCount; i++){
@@ -49,3 +49,13 @@ console.log(personalMovieDB);
 // personalMovieDB.movies[a] = b;
 // personalMovieDB.movies[c] = d;
 
+function showMyDb () {
+return console.log(personalMovieDB);
+}
+
+function writeYourGenres (){
+    for (let j = 1; j <= 3; j++){
+        let userAnswer = prompt(`введите жанр ${j}`, ``);
+        personalMovieDB.genres[j-1] = userAnswer; 
+    }
+}
