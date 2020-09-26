@@ -2,26 +2,50 @@
 
 'use strict'; 
 
- let NumberOfFilms; 
-
- NumberOfFilms = +prompt("Сколько фильмов?", "");
-
+ 
+ let i;
+ const filmsCount = +prompt("Сколько фильмов смотрел?", "")
+ let userInputCount = +prompt("Сколько фильмов занести?");
 
 
 let personalMovieDB = {
-count: NumberOfFilms,
+count: filmsCount,
 movies: {},
 actors: {},
 genres: [],
 privat: false
 };
 
-const a = prompt("Один из последних фильмов", "");
-const b = prompt("Оценка", "");
-const c = prompt("Один из последних фильмов", "");
-const d = prompt("Оценка", "");
 
-personalMovieDB.movies[a] = b;
-personalMovieDB.movies[c] = d;
 
-document.write(`Ответ - ${personalMovieDB.movies}`);
+
+for (i=1; i <= userInputCount; i++){
+
+            let a = prompt("Один из последних фильмов", "");
+            console.log(a);
+            let b = prompt("Оценка", "");
+        if (a.length >= 50){
+            console.log("Эй, не так много символов");
+            i = 1;
+        } else if (a.length <= 0){
+            console.log("Ты ничего не ввел");
+            i--;
+        }
+       
+             personalMovieDB.movies[a] = b;
+}
+    if (personalMovieDB.count < 10){
+        console.log('очень мало, друг мой');
+    } else if (personalMovieDB.count >=10 && personalMovieDB.count < 30){
+            console.log("Классический зритель");
+    } else if (personalMovieDB.count > 30){
+        console.log('Киноман');
+    } else { 
+        console.log('ошибка');
+    }
+
+console.log(personalMovieDB);
+
+// personalMovieDB.movies[a] = b;
+// personalMovieDB.movies[c] = d;
+
