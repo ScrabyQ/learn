@@ -48,7 +48,7 @@ console.log(personalMovieDB);
 
 // personalMovieDB.movies[a] = b;
 // personalMovieDB.movies[c] = d;
-
+1
 function showMyDb () {
 return console.log(personalMovieDB);
 }
